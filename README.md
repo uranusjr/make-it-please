@@ -34,6 +34,17 @@ functionality to Windows.
   behaviour).
 * `touch.bat`: "Touch" a file, creating it if needed. On Windows this can be
   done by writing `NUL` (nothing) to the end of a file.
+* `which.bat`: Uses [bat] to only return the first entry of `where`, unless
+  `-a` is passed.
+* `head.bat` : Uses [bat]. `-n` is supported.
+* `less.bat`: Uses [bat]. `-n` is supported.
+
+[bat]: https://github.com/sharkdp/bat
+
+Flags are restrictive due to the severe restrictions imposed by BAT. They must
+come first, and have a tendency to blow up if passed the wrong things. I can
+live with it though since this is mainly used for pre-written scripts that
+should work anyway, and don’t really need good error messages.
 
 
 ## TODO
